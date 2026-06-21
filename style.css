@@ -277,6 +277,10 @@ ul {
     transform: translateY(-2px);
 }
 
+.mobile-social-container {
+    display: none;
+}
+
 /* Sections General */
 section {
     padding: 6.5rem 0;
@@ -1159,13 +1163,7 @@ textarea.form-control {
 /* Responsiveness */
 @media (max-width: 992px) {
     .hero-bg-watermark {
-        display: block;
-        width: 100%;
-        height: 100%;
-        opacity: 0.12;
-        mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%);
-        -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%);
-        background-position: center center;
+        display: none;
     }
 
     section {
@@ -1248,5 +1246,43 @@ textarea.form-control {
     
     .podcast-player-card, .contact-form-card {
         padding: 1.8rem;
+    }
+    
+    .controls-container {
+        display: none;
+    }
+    
+    .mobile-social-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border-glass);
+    }
+    
+    .mobile-social-container .social-links {
+        display: flex;
+        gap: 1.2rem;
+    }
+    
+    .mobile-social-container .social-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--bg-primary);
+        border: 1px solid var(--border-glass);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-secondary);
+        transition: all var(--transition-fast);
+    }
+    
+    .mobile-social-container .social-btn:hover {
+        background: var(--accent-forest);
+        color: white;
+        border-color: var(--accent-forest);
+        transform: translateY(-2px);
     }
 }
